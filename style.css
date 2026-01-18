@@ -85,3 +85,53 @@ body.dark-mode {
     margin-top: 1rem;
     text-align: center;
 }
+
+.contact-container {
+    text-align: center;
+    background-color: var(--container-bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-container label {
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.contact-container input[type="email"],
+.contact-container textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.contact-container textarea {
+    resize: vertical;
+}
+
+.contact-container button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
