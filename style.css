@@ -135,3 +135,23 @@ body.dark-mode {
 .contact-container button[type="submit"]:hover {
     background-color: #45a049;
 }
+
+.comments-section {
+    margin-top: 2rem;
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--container-bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#disqus_thread {
+    min-height: 200px;
+}
