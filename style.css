@@ -35,7 +35,7 @@ body.dark-mode {
     --button-text-light: var(--button-text-dark);
 }
 
-.lotto-container {
+.menu-container {
     text-align: center;
     background-color: var(--container-bg-light);
     padding: 2rem;
@@ -43,22 +43,11 @@ body.dark-mode {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#lotto-numbers {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.lotto-number {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    background-color: var(--number-bg-light);
+#menu-recommendation {
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 2rem;
+    min-height: 2rem;
 }
 
 #generate-btn {

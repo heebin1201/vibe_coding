@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const lottoNumbersDiv = document.getElementById('lotto-numbers');
+    const menuRecommendationDiv = document.getElementById('menu-recommendation');
     const generateBtn = document.getElementById('generate-btn');
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
+
+    const dinnerMenus = [
+        "치킨", "피자", "삼겹살", "족발", "보쌈", "짜장면", "짬뽕", "떡볶이", "김치찌개", "된장찌개", "부대찌개", "초밥", "파스타", "스테이크", "햄버거", "샌드위치", "샐러드", "라면", "우동", "돈까스"
+    ];
 
     // Theme toggle
     themeToggleBtn.addEventListener('click', () => {
@@ -22,22 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     generateBtn.addEventListener('click', () => {
-        lottoNumbersDiv.innerHTML = '';
-        const numbers = generateLottoNumbers();
-        numbers.forEach(number => {
-            const span = document.createElement('span');
-            span.className = 'lotto-number';
-            span.textContent = number;
-            lottoNumbersDiv.appendChild(span);
-        });
+        const randomIndex = Math.floor(Math.random() * dinnerMenus.length);
+        const recommendedMenu = dinnerMenus[randomIndex];
+        menuRecommendationDiv.textContent = recommendedMenu;
     });
-
-    function generateLottoNumbers() {
-        const numbers = new Set();
-        while (numbers.size < 6) {
-            const randomNumber = Math.floor(Math.random() * 45) + 1;
-            numbers.add(randomNumber);
-        }
-        return Array.from(numbers).sort((a, b) => a - b);
-    }
 });
