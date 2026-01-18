@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuRecommendationDiv = document.getElementById('menu-recommendation');
     const generateBtn = document.getElementById('generate-btn');
     const themeToggleBtn = document.getElementById('theme-toggle');
+    const foodImage = document.getElementById('food-image');
     const body = document.body;
 
     const dinnerMenus = {
@@ -36,5 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomIndex = Math.floor(Math.random() * menus.length);
         const recommendedMenu = menus[randomIndex];
         menuRecommendationDiv.textContent = recommendedMenu;
+
+        // Simulate image generation
+        const imageUrl = `https://via.placeholder.com/300x200.png?text=${recommendedMenu}`;
+        foodImage.src = imageUrl;
     });
 });
