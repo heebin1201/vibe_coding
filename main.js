@@ -1,21 +1,24 @@
-const urlInput = document.getElementById('url-input');
-const goBtn = document.getElementById('go-btn');
-const browserFrame = document.getElementById('browser-frame');
+document.addEventListener('DOMContentLoaded', () => {
+    const lottoNumbersDiv = document.getElementById('lotto-numbers');
+    const generateBtn = document.getElementById('generate-btn');
 
-function navigate() {
-    let url = urlInput.value.trim();
-    if (url) {
-        if (!url.startsWith('http://') && !url.startsWith('https://')) {
-            url = 'https://' + url;
+    generateBtn.addEventListener('click', () => {
+        lottoNumbersDiv.innerHTML = '';
+        const numbers = generateLottoNumbers();
+        numbers.forEach(number => {
+            const span = document.createElement('span');
+            span.className = 'lotto-number';
+            span.textContent = number;
+            lottoNumbersDiv.appendChild(span);
+        });
+    });
+
+    function generateLottoNumbers() {
+        const numbers = new Set();
+        while (numbers.size < 6) {
+            const randomNumber = Math.floor(Math.random() * 45) + 1;
+            numbers.add(randomNumber);
         }
-        browserFrame.src = url;
-    }
-}
-
-goBtn.addEventListener('click', navigate);
-
-urlInput.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-        navigate();
+        return Array.from(numbers).sort((a, b) => a - b);
     }
 });
