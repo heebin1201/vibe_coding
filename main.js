@@ -4,9 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    const dinnerMenus = [
-        "치킨", "피자", "삼겹살", "족발", "보쌈", "짜장면", "짬뽕", "떡볶이", "김치찌개", "된장찌개", "부대찌개", "초밥", "파스타", "스테이크", "햄버거", "샌드위치", "샐러드", "라면", "우동", "돈까스"
-    ];
+    const dinnerMenus = {
+        "ko": [
+            "치킨", "피자", "삼겹살", "족발", "보쌈", "짜장면", "짬뽕", "떡볶이", "김치찌개", "된장찌개", "부대찌개", "초밥", "파스타", "스테이크", "햄버거", "샌드위치", "샐러드", "라면", "우동", "돈까스"
+        ],
+        "en": [
+            "Chicken", "Pizza", "Pork Belly", "Jokbal", "Bossam", "Jajangmyeon", "Jjamppong", "Tteokbokki", "Kimchi Jjigae", "Doenjang Jjigae", "Budae Jjigae", "Sushi", "Pasta", "Steak", "Hamburger", "Sandwich", "Salad", "Ramen", "Udon", "Donkatsu"
+        ]
+    };
 
     // Theme toggle
     themeToggleBtn.addEventListener('click', () => {
@@ -26,8 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     generateBtn.addEventListener('click', () => {
-        const randomIndex = Math.floor(Math.random() * dinnerMenus.length);
-        const recommendedMenu = dinnerMenus[randomIndex];
+        const lang = document.documentElement.lang;
+        const menus = dinnerMenus[lang];
+        const randomIndex = Math.floor(Math.random() * menus.length);
+        const recommendedMenu = menus[randomIndex];
         menuRecommendationDiv.textContent = recommendedMenu;
     });
 });

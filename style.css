@@ -80,3 +80,8 @@ body.dark-mode {
     background-color: var(--text-color-light);
     color: var(--container-bg-light);
 }
+
+.lang-switcher {
+    margin-top: 1rem;
+    text-align: center;
+}
