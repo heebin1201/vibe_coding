@@ -1,15 +1,43 @@
+:root {
+    --background-color-light: #f0f0f0;
+    --container-bg-light: #fff;
+    --text-color-light: #000;
+    --number-bg-light: #eee;
+    --button-bg-light: #4CAF50;
+    --button-text-light: #fff;
+
+    --background-color-dark: #222;
+    --container-bg-dark: #333;
+    --text-color-dark: #fff;
+    --number-bg-dark: #555;
+    --button-bg-dark: #555;
+    --button-text-dark: #fff;
+}
+
 body {
     font-family: sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    --background-color-light: var(--background-color-dark);
+    --container-bg-light: var(--container-bg-dark);
+    --text-color-light: var(--text-color-dark);
+    --number-bg-light: var(--number-bg-dark);
+    --button-bg-light: var(--button-bg-dark);
+    --button-text-light: var(--button-text-dark);
 }
 
 .lotto-container {
     text-align: center;
-    background-color: #fff;
+    background-color: var(--container-bg-light);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,7 +57,7 @@ body {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    background-color: #eee;
+    background-color: var(--number-bg-light);
     font-weight: bold;
 }
 
@@ -38,12 +66,28 @@ body {
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #generate-btn:hover {
     background-color: #45a049;
+}
+
+#theme-toggle {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text-color-light);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--text-color-light);
+    color: var(--container-bg-light);
 }
