@@ -3,40 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What should I eat for dinner? Let us help you decide with our random dinner menu recommendation. Get one of 20 popular menu suggestions instantly.">
+    <meta name="keywords" content="dinner menu, menu recommendation, what to eat, food recommendation, random menu, dinner ideas">
+    <meta name="author" content="What Should I Eat Tonight?">
     <meta name="google-adsense-account" content="ca-pub-6361930458724664">
-    <title>Dinner Menu Recommendation</title>
+    <meta property="og:title" content="What Should I Eat for Dinner? - Menu Recommendation">
+    <meta property="og:description" content="Solve your daily dinner dilemma. Get a random menu recommendation with one click!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://week1-22d0d.web.app/index_en.html">
+    <link rel="canonical" href="https://week1-22d0d.web.app/index_en.html">
+    <title>What Should I Eat for Dinner? - Menu Recommendation</title>
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6361930458724664" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "What Should I Eat for Dinner?",
+        "url": "https://week1-22d0d.web.app/index_en.html",
+        "description": "Random dinner menu recommendation service to help you decide what to eat"
+    }
+    </script>
 </head>
 <body>
-    <div class="menu-container">
-        <h1>What should I eat for dinner tonight?</h1>
-        <div id="menu-recommendation"></div>
-        <button id="generate-btn">Recommend Menu</button>
-    </div>
-    <div class="lang-switcher">
-        <a href="index.html">한국어</a> | <a href="index_en.html">English</a> | <a href="contact.html">Partnership Inquiry</a>
-    </div>
-    <button id="theme-toggle">Change Theme</button>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index_en.html" class="logo">What's for Dinner?</a>
+            <ul class="nav-links">
+                <li><a href="index_en.html" class="active">Home</a></li>
+                <li><a href="guide.html">Menu Guide</a></li>
+                <li><a href="menus.html">Menu List</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="mobile-menu-btn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
-    <div class="comments-section">
-        <h2>Comments</h2>
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = window.location.href;
-                this.page.identifier = 'index-en';
-            };
-            (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://productbuilder-19.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+    <main>
+        <section class="hero-section">
+            <div class="menu-container">
+                <h1>What should I eat for dinner tonight?</h1>
+                <p class="hero-description">Tired of the daily dinner dilemma? Let us decide for you with one click!</p>
+                <div id="menu-recommendation" aria-live="polite"></div>
+                <button id="generate-btn">Get Recommendation</button>
+                <p class="menu-count">Randomly selected from 20 popular menus!</p>
+            </div>
+        </section>
 
+        <section class="features-section">
+            <h2>Why Use Our Service?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Quick Decision</h3>
+                    <p>Can't decide? One click and your dinner is chosen instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Diverse Selection</h3>
+                    <p>20 popular menus including Korean, Chinese, Japanese, and Western cuisines.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Detailed Info</h3>
+                    <p>Check calories, price range, and recommended situations for each menu.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Free to Use</h3>
+                    <p>No sign-up required. Anyone can use it for free.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-menus-section">
+            <h2>Top 5 Popular Menus</h2>
+            <div class="popular-menus-grid">
+                <a href="menus.html#chicken" class="popular-menu-card">
+                    <h3>Chicken</h3>
+                    <p>Korea's favorite late-night snack</p>
+                </a>
+                <a href="menus.html#samgyeopsal" class="popular-menu-card">
+                    <h3>Pork Belly</h3>
+                    <p>Perfect for gatherings</p>
+                </a>
+                <a href="menus.html#pizza" class="popular-menu-card">
+                    <h3>Pizza</h3>
+                    <p>Great for the whole family</p>
+                </a>
+                <a href="menus.html#jajangmyeon" class="popular-menu-card">
+                    <h3>Jajangmyeon</h3>
+                    <p>Classic delivery food</p>
+                </a>
+                <a href="menus.html#kimchi-jjigae" class="popular-menu-card">
+                    <h3>Kimchi Jjigae</h3>
+                    <p>Korean soul food</p>
+                </a>
+            </div>
+            <a href="menus.html" class="view-all-link">View all menus &rarr;</a>
+        </section>
+
+        <section class="guide-preview-section">
+            <h2>Need Help Choosing?</h2>
+            <p>Check out our menu selection guide based on situations, moods, and weather.</p>
+            <div class="guide-preview-grid">
+                <div class="guide-preview-card">
+                    <h3>By Situation</h3>
+                    <p>Team dinner, solo dining, late night work... Find the right menu for your situation.</p>
+                </div>
+                <div class="guide-preview-card">
+                    <h3>By Mood</h3>
+                    <p>Stressed, happy, feeling blue - find the perfect comfort food!</p>
+                </div>
+                <div class="guide-preview-card">
+                    <h3>By Weather</h3>
+                    <p>Rainy day, hot summer, cold winter - we've got menu suggestions for every weather.</p>
+                </div>
+            </div>
+            <a href="guide.html" class="cta-button">View Guide</a>
+        </section>
+
+        <section class="comments-section">
+            <h2>Comments</h2>
+            <p class="comments-description">What did you have for dinner? Share your menu with us!</p>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = 'index-en';
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://productbuilder-19.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>What's for Dinner?</h3>
+                <p>A random dinner menu recommendation service to solve your daily food dilemma.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="guide.html">Menu Guide</a>
+                <a href="menus.html">Menu List</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-legal">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-lang">
+                <h4>Language</h4>
+                <a href="index.html">한국어</a>
+                <a href="index_en.html">English</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 What Should I Eat for Dinner? All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="theme-toggle" aria-label="Change theme">Change Theme</button>
     <script src="main.js"></script>
 </body>
 </html>

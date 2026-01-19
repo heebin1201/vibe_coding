@@ -3,25 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="오늘 저녁 뭐 먹지? 문의하기 - 서비스에 대한 문의, 제안, 제휴 문의를 보내주세요.">
     <meta name="google-adsense-account" content="ca-pub-6361930458724664">
-    <title>제휴 문의</title>
+    <title>문의하기 - 오늘 저녁 뭐 먹지?</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://week1-22d0d.web.app/contact.html">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6361930458724664" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="contact-container">
-        <h1>제휴 문의</h1>
-        <form action="https://formspree.io/f/xgooanjy" method="POST">
-            <label for="email">이메일:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">문의 내용:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">보내기</button>
-        </form>
-        <div class="lang-switcher">
-            <a href="index.html">메인으로</a>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">오늘 저녁 뭐 먹지?</a>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="guide.html">메뉴 가이드</a></li>
+                <li><a href="menus.html">메뉴 목록</a></li>
+                <li><a href="about.html">소개</a></li>
+                <li><a href="contact.html" class="active">문의</a></li>
+            </ul>
+            <button id="mobile-menu-btn" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="contact-container">
+            <h1>문의하기</h1>
+            <p class="contact-description">서비스에 대한 문의, 제안, 또는 제휴 문의를 보내주세요. 빠른 시일 내에 답변 드리겠습니다.</p>
+            <form action="https://formspree.io/f/xgooanjy" method="POST">
+                <label for="email">이메일 주소</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="subject">문의 유형</label>
+                <select id="subject" name="subject" style="padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; background-color: var(--background-color); color: var(--text-color);">
+                    <option value="general">일반 문의</option>
+                    <option value="suggestion">서비스 제안</option>
+                    <option value="partnership">제휴 문의</option>
+                    <option value="bug">버그 신고</option>
+                    <option value="other">기타</option>
+                </select>
+
+                <label for="message">문의 내용</label>
+                <textarea id="message" name="message" rows="6" placeholder="문의하실 내용을 입력해주세요." required></textarea>
+
+                <button type="submit">보내기</button>
+            </form>
         </div>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>오늘 저녁 뭐 먹지?</h3>
+                <p>매일 저녁 메뉴 고민을 해결해주는 무작위 메뉴 추천 서비스입니다.</p>
+            </div>
+            <div class="footer-links">
+                <h4>바로가기</h4>
+                <a href="about.html">사이트 소개</a>
+                <a href="guide.html">메뉴 가이드</a>
+                <a href="menus.html">메뉴 목록</a>
+                <a href="contact.html">문의하기</a>
+            </div>
+            <div class="footer-legal">
+                <h4>법적 고지</h4>
+                <a href="privacy.html">개인정보처리방침</a>
+                <a href="terms.html">이용약관</a>
+            </div>
+            <div class="footer-lang">
+                <h4>언어</h4>
+                <a href="index.html">한국어</a>
+                <a href="index_en.html">English</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 오늘 저녁 뭐 먹지? All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="theme-toggle" aria-label="테마 변경">테마 변경</button>
     <script src="main.js"></script>
 </body>
 </html>
