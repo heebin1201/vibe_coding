@@ -1,0 +1,53 @@
+{
+  "name": "오늘 저녁 뭐 먹지? - 저녁 메뉴 추천",
+  "short_name": "저녁메뉴추천",
+  "description": "매일 저녁 메뉴 고민을 해결해드립니다. 버튼 한 번으로 20가지 인기 메뉴 중 하나를 랜덤으로 추천받으세요.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["food", "lifestyle", "utilities"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "메뉴 추천받기",
+      "short_name": "추천",
+      "description": "랜덤 메뉴 추천",
+      "url": "/",
+      "icons": [{ "src": "favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "메뉴 목록",
+      "short_name": "목록",
+      "description": "전체 메뉴 보기",
+      "url": "/menus.html",
+      "icons": [{ "src": "favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "메뉴 가이드",
+      "short_name": "가이드",
+      "description": "메뉴 선택 가이드",
+      "url": "/guide.html",
+      "icons": [{ "src": "favicon.svg", "sizes": "any" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
